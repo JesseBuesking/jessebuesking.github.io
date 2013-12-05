@@ -110,11 +110,11 @@ blockquote {
 // Paragraphs
 // --------------------------------------------------
 p {
-	margin: 0 0 @indent-var;
+	padding: 0 0 (@indent-var/2);
 	& + p {
 		//siblings indentation
 		text-indent: @indent-var;
-		margin-top: -(@indent-var);
+		padding-top: -(@indent-var);
 	}
 }
 
