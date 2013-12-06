@@ -2,7 +2,7 @@ title:            Jesse Buesking
 tagline:          Things Jesse wanted to post.
 description:      Things Jesse wanted to post.
 #Comment out url when working locally to resolve base urls correctly
-url:              http://www.jessebuesking.com
+url:              jessebuesking.com
 
 # Owner/author information
 owner:
@@ -22,7 +22,7 @@ owner:
   google_plus:    https://plus.google.com/115905154797045475520
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
+google_analytics:   UA-46263716-1
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:        
