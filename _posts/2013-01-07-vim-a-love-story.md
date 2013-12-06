@@ -8,6 +8,7 @@ categories:
     - programming
 tags:
     - vim
+comments: true
 image:
   feature: texture-feature-01.jpg
   credit: Lei Han

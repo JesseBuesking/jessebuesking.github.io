@@ -2,7 +2,7 @@ title:                  Jesse Buesking
 tagline:                Things Jesse wanted to post.
 description:            Things Jesse wanted to post.
 #Comment out url when working locally to resolve base urls correctly
-url:                    jessebuesking.com
+url:                    http://www.jessebuesking.com
 
 # Owner/author information
 owner:
@@ -30,6 +30,10 @@ google_analytics:       UA-46263716-1
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:        
+
+# Disqus Comments
+disqus_short_name: jessebuesking
+disqus_show_comment_count: true
 
 # Links to include in top navigation
 # For external links add external: true

@@ -9,6 +9,7 @@ categories:
 tags:
     - git
     - permissions
+comments: true
 image:
   feature: texture-feature-01.jpg
   credit: Lei Han
