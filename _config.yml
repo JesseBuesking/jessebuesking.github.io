@@ -11,10 +11,14 @@ owner:
   bio:            "Data scientist / software engineer in the bay area."
   email:          jessebuesking@gmail.com
   # Social networking links are used in author-bio sidebar. Update and remove as you like.
-  twitter:        JesseBuesking
-  facebook:       jesse.buesking
-  github:         JesseBuesking
-  linkedin:       jessebuesking
+  twitter:              JesseBuesking
+  facebook:             jesse.buesking
+  github:               JesseBuesking
+  linkedin:             jessebuesking
+  stackoverflow_id:     435460
+  stackoverflow_name:   jessebuesking
+  bitbucket:            JesseBuesking
+  nuget:                JesseBuesking
 #  instagram:      
 #  lastfm:         
 #  tumblr:         
