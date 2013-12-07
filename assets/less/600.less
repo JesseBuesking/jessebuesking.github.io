@@ -3,6 +3,11 @@
 // TEXTURE ====================================================
 // ELEMENTS ===================================================
 // LAYOUT =====================================================
+/*
+#main-wrapper {
+    width: 100%;
+}
+*/
 .site-name {
 	.grid(12,2);
 	.prefix(12,0.5);
@@ -26,11 +31,22 @@
 	.suffix(12,0);
 }
 #main article {
+    /*
+    width: 80%;
+    min-height: 500px;
+    margin-left: 20%;
+    margin-right: 0;
+    */
 	.grid(12,6);
 	.prefix(12,0);
 	.suffix(12,0);
 }
 #index {
+    /*
+    width: 80%;
+    margin-left: 20%;
+	min-height: 450px;
+	*/
 	.grid(12,6);
 	.prefix(12,0);
 	.suffix(12,0);
@@ -42,9 +58,13 @@
 }
 .article-author-top {
 	display: block;
-	.grid(12,2);
+    .grid(12,2);
 	.prefix(12,0.5);
 	.suffix(12,0.5);
+    //width: 18%;
+    //width: 160px;
+	//margin-left: 2%;
+	//margin-right: 2%;
 	h3,
 	.bio-photo,
 	p,

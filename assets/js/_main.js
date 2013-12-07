@@ -33,4 +33,7 @@ $(document).ready(function() {
     // make it unique to apply your CSS animations just to this exact popup
     mainClass: 'mfp-fade'
   });
+
+  // icon hover
+  $('a > i.fa').parent().hover(function() { $('i.fa', this).toggleClass('hover'); });
 });

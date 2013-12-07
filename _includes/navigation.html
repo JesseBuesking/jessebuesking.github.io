@@ -5,8 +5,14 @@
 	<div class="top-navigation">
 		<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 		    <ul>
+                {% capture thispage %}{{ page.url | replace:'/',' ' | truncatewords: 1 | remove:'...' }}{% endcapture %}
 		        {% for link in site.links %}
-				<li><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
+                    {% assign hln = nil %}
+                    {% capture linkurl %}{{ link.url | replace:'/',' ' | truncatewords: 1 | remove:'...' }}{% endcapture %}
+                    {% if thispage == linkurl %}
+                        {% assign hln = 'hl-nav' %}
+                    {% endif %}
+                    <li class="{{ hln }}"><a href="{% if link.external %}{{ link.url }}{% else %}{{ site.url }}{{ link.url }}{% endif %}" {% if link.external %}target="_blank"{% endif %}>{{ link.title }}</a></li>
 		        {% endfor %}
 		        <li><i class="icon-feed"></i> <a href="{{ site.url }}/feed.xml" title="Atom/RSS feed">Feed</a>
 		    </ul>

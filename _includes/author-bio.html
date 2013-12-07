@@ -1,14 +1,14 @@
-<img src="{{ site.owner.avatar }}" class="bio-photo" alt="{{ site.owner.name }} bio photo"></a>
-<h3>{{ site.owner.name }}</h3>
+<a href="{{ site.url }}"><img src="{{ site.owner.avatar }}" class="bio-photo" alt="{{ site.owner.name }} bio photo"></a>
+<h3><a href="{{ site.url }}">{{ site.owner.name }}</a></h3>
 <p>{{ site.owner.bio }}</p>
-{% if site.owner.twitter %}<a href="http://twitter.com/{{ site.owner.twitter }}" class="author-social" target="_blank"><i class="icon-twitter"></i> Twitter</a>{% endif %}
-{% if site.owner.facebook %}<a href="http://facebook.com/{{ site.owner.facebook }}" class="author-social" target="_blank"><i class="icon-facebook"></i> Facebook</a>{% endif %}
-{% if site.owner.google_plus %}<a href="{{ site.owner.google_plus }}" class="author-social" target="_blank"><i class="icon-google-plus"></i> Google+</a>{% endif %}
-{% if site.owner.linkedin %}<a href="http://linkedin.com/in/{{ site.owner.linkedin }}" class="author-social" target="_blank"><i class="icon-linkedin"></i> LinkedIn</a>{% endif %}
-<!--{% if site.owner.instagram %}<a href="http://instagram.com/{{ site.owner.instagram }}" class="author-social" target="_blank"><i class="icon-instagram"></i> Instagram</a>{% endif %}-->
-{% if site.owner.github %}<a href="http://github.com/{{ site.owner.github }}" class="author-social" target="_blank"><i class="icon-github"></i> Github</a>{% endif %}
+{% if site.owner.twitter %}<a href="http://twitter.com/{{ site.owner.twitter }}" class="author-social" target="_blank"><i class="fa icon-twitter-squared"></i> Twitter</a>{% endif %}
+<!--{% if site.owner.facebook %}<a href="http://facebook.com/{{ site.owner.facebook }}" class="author-social" target="_blank"><i class="fa icon-facebook-squared"></i> Facebook</a>{% endif %}-->
+{% if site.owner.google_plus %}<a href="{{ site.owner.google_plus }}" class="author-social" target="_blank"><i class="fa icon-gplus-squared"></i> Google+</a>{% endif %}
+{% if site.owner.linkedin %}<a href="http://linkedin.com/in/{{ site.owner.linkedin }}" class="author-social" target="_blank"><i class="fa icon-linkedin-squared"></i> LinkedIn</a>{% endif %}
+<!--{% if site.owner.instagram %}<a href="http://instagram.com/{{ site.owner.instagram }}" class="author-social" target="_blank"><i class="fa icon-instagram"></i> Instagram</a>{% endif %}-->
+{% if site.owner.github %}<a href="http://github.com/{{ site.owner.github }}" class="author-social" target="_blank"><i class="fa icon-github-squared"></i> Github</a>{% endif %}
 <!--{% if site.owner.lastfm %}<a href="http://lastfm.com/{{ site.owner.lastfm }}" class="author-social" target="_blank"><i class="icon-lastfm"></i> Last.fm</a>{% endif %}-->
-<!--{% if site.owner.tumblr %}<a href="http://{{ site.owner.tumblr }}.tumblr.com" class="author-social" target="_blank"><i class="icon-tumblr"></i> Tumblr</a>{% endif %}-->
-{% if site.owner.stackoverflow_id %}<a href="http://stackoverflow.com/users/{{ site.owner.stackoverflow_id }}/{{ site.owner.stackoverflow_name}}" class="author-social" target="_blank"><i class="icon-stackoverflow"></i> StackOverflow</a>{% endif %}
-{% if site.owner.bitbucket %}<a href="http://bitbucket.org/{{ site.owner.bitbucket }}" class="author-social" target="_blank"><i class="icon-bitbucket"></i> Bitbucket</a>{% endif %}
-{% if site.owner.nuget %}<a href="https://www.nuget.org/profiles/{{ site.owner.nuget }}" class="author-social" target="_blank"><i class="icon-nuget"></i> NuGet</a>{% endif %}
+<!--{% if site.owner.tumblr %}<a href="http://{{ site.owner.tumblr }}.tumblr.com" class="author-social" target="_blank"><i class="fa icon-tumblr-squared"></i> Tumblr</a>{% endif %}-->
+{% if site.owner.stackoverflow_id %}<a href="http://stackoverflow.com/users/{{ site.owner.stackoverflow_id }}/{{ site.owner.stackoverflow_name}}" class="author-social" target="_blank"><i class="fa icon-stack-overflow"></i> StackOverflow</a>{% endif %}
+{% if site.owner.bitbucket %}<a href="http://bitbucket.org/{{ site.owner.bitbucket }}" class="author-social" target="_blank"><i class="fa icon-bitbucket-squared"></i> Bitbucket</a>{% endif %}
+{% if site.owner.nuget %}<a href="https://www.nuget.org/profiles/{{ site.owner.nuget }}" class="author-social" target="_blank"><i class="fa icon-box"></i> NuGet</a>{% endif %}

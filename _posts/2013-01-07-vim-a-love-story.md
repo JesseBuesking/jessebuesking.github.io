@@ -10,7 +10,7 @@ tags:
     - vim
 comments: true
 image:
-  feature: texture-feature-01.jpg
+  feature: texture-feature-02.jpg
   credit: Lei Han
   creditlink: http://www.flickr.com/photos/sunsetnoir/8104146861
 ---
