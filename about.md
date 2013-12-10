@@ -13,7 +13,7 @@ My name is Jesse Buesking. I'm a [programmer](https://github.com/JesseBuesking),
 
 Normally you can find me programming or watching shows on Netflix - or both at the same time. Within the past year or so I've finally decided to start open sourcing and sharing projects I've worked on in my spare time. I think like most programmers I typically don't like to share my code since I doubt my own personal skill, but recently I've just stopped caring.
 
-I really enjoy learning, so I spend a lot of my free time "following leads" left by other bloggers and tweeters. Typically someone will link to an article that will get me thinking, I'll come up with my own - potentially unique - ideas for that topic, and I'll spend the rest of the evening bouncing from site to site satisfying my own intellectual curiosity. As you can see, I live life on the edge.
+I really enjoy learning, so I spend a lot of my free time reading tweets, blogs, and books. I currently only read technical things, like whitepapers on various algorithms, blog posts on approaches to tackling programming challenges like scaling, or anything else that satisfies my own intellectual curiosity. As you can see, I live life on the edge.
 
 ### Banner image
 
