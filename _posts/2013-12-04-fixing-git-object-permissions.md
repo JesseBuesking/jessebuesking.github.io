@@ -103,4 +103,4 @@ you're ready to run it. Execute the script using a command like
 
     /path/to/my/script.sh /path/to/repository.git
 
-After that, committing to the repository should now fire of the `chgrp`, `chmod`, and `chown` commands that we've applied using our script, effectively resetting all permissions back to our `git` user.
+After that, committing to the repository should now fire off the `chgrp`, `chmod`, and `chown` commands that we've applied using our script, effectively resetting all permissions back to our `git` user.
