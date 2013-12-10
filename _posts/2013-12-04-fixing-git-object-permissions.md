@@ -12,8 +12,6 @@ tags:
 comments: true
 image:
   feature: texture-feature-02.jpg
-  credit: Lei Han
-  creditlink: http://www.flickr.com/photos/sunsetnoir/8104146861
 ---
 
 I've recently become more annoyed with permissions issues in a git repository that I have set up on my personal box. Every time someone commits changes, some files within

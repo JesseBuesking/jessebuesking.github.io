@@ -15,8 +15,6 @@ tags:
 comments: true
 image:
   feature: texture-feature-02.jpg
-  credit: Lei Han
-  creditlink: http://www.flickr.com/photos/sunsetnoir/8104146861
 ---
 
 I've finally taken the plunge and decided to try my hand at [Intermediate Language (IL)weaving](http://stackoverflow.com/questions/189359/what-is-il-weaving). I'm only about two weeks in, but I've gotta say that it's been a great learning experience.

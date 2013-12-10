@@ -11,8 +11,6 @@ tags:
 comments: true
 image:
   feature: texture-feature-02.jpg
-  credit: Lei Han
-  creditlink: http://www.flickr.com/photos/sunsetnoir/8104146861
 ---
 
 Yes, that was the most ridiculous title I could think of.
