@@ -774,7 +774,7 @@ a {
   transition: all 0.2s ease;
 }
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'PT Serif', serif;
   color: #333332;
 }
 h1,
@@ -887,7 +887,7 @@ blockquote {
   margin-left: -28px;
   padding-left: 20px;
   border-left: 8px solid #333332;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'PT Serif', serif;
   font-style: italic;
   font-size: 24px;
   font-size: 1.5rem;
@@ -2220,7 +2220,7 @@ input,
 button,
 select,
 textarea {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'PT Serif', serif;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -2451,7 +2451,7 @@ select:focus {
 /* Page level layout styles ================================ */
 body {
   background-color: #ffffff;
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: 'PT Serif', serif;
   font-color: #333332;
 }
 .navigation-wrapper {
@@ -2942,7 +2942,10 @@ body {
   text-transform: uppercase;
   margin-bottom: 0;
 }
-.related-articles li {
+.related-articles ul {
+  margin-bottom: 2em;
+}
+.related-articles ul li {
   margin-bottom: 0;
   color: #ffffff;
 }
