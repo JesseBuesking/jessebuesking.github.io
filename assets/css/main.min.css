@@ -884,13 +884,16 @@ figcaption {
   border-radius: 3px;
 }
 blockquote {
-  margin-left: -28px;
-  padding-left: 20px;
-  border-left: 8px solid #333332;
-  font-family: 'PT Serif', serif;
-  font-style: italic;
-  font-size: 24px;
-  font-size: 1.5rem;
+  margin: 1em 0;
+  padding: 0 1em;
+  border-left: 4px solid #ddd;
+  font-family: Helvetica, arial, freesans, clean, sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #777;
+}
+blockquote p {
+  padding: .5em 0;
 }
 .footnotes ol,
 .footnotes li,
@@ -924,7 +927,7 @@ li code {
   margin: 0 2px;
   padding: 0 5px;
   border: 1px solid #f7f7f7;
-  background-color: #efefef;
+  background-color: #f4f4f4;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -937,16 +940,12 @@ pre {
 }
 /* Pygments Syntax highlighting ============================= */
 .highlight {
-  background-color: #efefef;
+  background-color: #fbfbfb;
   font-family: Monaco, "Courier New", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 2.1667;
+  padding-left: 1em;
+  border-left: 2px solid #cdcdcd;
   color: #333332;
   margin-bottom: 1.5em;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
   /* Comment */
   /* Error */
   /* Keyword */
@@ -1012,6 +1011,7 @@ pre {
   position: relative;
   margin: 0;
   padding: 1em;
+  font-size: .9em;
 }
 .highlight .lineno {
   padding-right: 24px;
@@ -2454,6 +2454,27 @@ body {
   font-family: 'PT Serif', serif;
   font-color: #333332;
 }
+.id-hash span.hash {
+  padding: 0 10px 0 0;
+  color: #bbb;
+}
+.id-hash span.hash.hover {
+  color: #aaa;
+  text-decoration: underline;
+}
+.id-hash span.header {
+  color: #333;
+}
+.id-hash span.header code {
+  background-color: #f4f4f4;
+  padding: 0 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.id-hash span.header.hover {
+  color: #000;
+}
 .navigation-wrapper {
   margin: 0 auto;
   width: 100%;
@@ -2639,6 +2660,9 @@ body {
 .headline-wrap .comments {
   padding: 0 0 0 20px;
 }
+.headline-wrap .comments:hover {
+  text-decoration: underline;
+}
 .byline {
   clear: both;
   font-size: 80%;
@@ -2719,6 +2743,7 @@ body {
 .article-wrap p > a:hover,
 .article-wrap li > a:hover {
   color: #276ea8;
+  text-decoration: underline;
 }
 .article-wrap p > a.reversefootnote,
 .article-wrap li > a.reversefootnote {

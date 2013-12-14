@@ -16,7 +16,9 @@ image:
 
 I've recently become more annoyed with permissions issues in a git repository that I have set up on my personal box. Every time someone commits changes, some files within
 
-    /path/to/repository.git/objects
+{% highlight bash %}
+/path/to/repository.git/objects
+{% endhighlight %}
     
 end up having the owner set to the user who made the commit, but that's not what I want. The goal is to have a single `git` user and group with permissions to all the files, and to add users who should have access to the repository to the `git` group.
 
@@ -38,7 +40,9 @@ You'll need to add the following lines to your sudoers file in order for your `g
     
 If you've never altered your sudoers file before, you can begin editing it with vim by entering
 
-    sudo visudo
+{% highlight bash %}
+sudo visudo
+{% endhighlight %}
     
 Note: We're technically giving anyone in the `git` group permissions to alter permissions on **any** file, but they can only set permission to the `git` group. However with this in place, anyone in the git group can alter any files permissions to give themselves access to it! This isn't a great idea, but admittedly I was struggling with restricting the permissions to my `git` user's home directory, so I left it here.
     
@@ -95,10 +99,14 @@ sudo /bin/chmod a+x $DIR/hooks/update
     
 Once you've created the script and given it execute permissions via
 
-    sudo chmod a+x /path/to/my/script.sh
+{% highlight bash %}
+sudo chmod a+x /path/to/my/script.sh
+{% endhighlight %}
     
 you're ready to run it. Execute the script using a command like
 
-    /path/to/my/script.sh /path/to/repository.git
+{% highlight bash %}
+/path/to/my/script.sh /path/to/repository.git
+{% endhighlight %}
 
 After that, committing to the repository should now fire off the `chgrp`, `chmod`, and `chown` commands that we've applied using our script, effectively resetting all permissions back to our `git` user.

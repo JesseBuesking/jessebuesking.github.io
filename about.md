@@ -21,4 +21,4 @@ The banner image is a photo I found by [Lei Han](http://www.flickr.com/photos/su
 
 ### Disclaimer
 
-The opinions expressed herein are my own personal opinions and do not represent my employer's view in any way.
+> The opinions expressed herein are my own personal opinions and do not represent my employer's view in any way.

@@ -3,6 +3,27 @@ body {
 	font-family: @base-font;
 	font-color: @textcolor;
 }
+.id-hash {
+    span.hash {
+        padding: 0 10px 0 0;
+        color: #bbb;
+        &.hover {
+            color: #aaa;
+            text-decoration: underline;
+        }
+    }
+    span.header {
+        color: #333;
+        code {
+            background-color: #f4f4f4;
+            padding: 0 5px;
+            .rounded(4px);
+        }
+        &.hover {
+            color: #000;
+        }
+    }
+}
 .navigation-wrapper {
 	.container();
 	padding: 2em 0 0;
@@ -138,6 +159,9 @@ body {
 }
 .headline-wrap .comments {
     padding: 0 0 0 20px;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 .byline {
 	clear: both;
@@ -202,6 +226,7 @@ body {
 	    color: #3c86c2;
 		&:hover {
 			color: #276ea8;
+			text-decoration: underline;
 		}
 	}
 	p > a.reversefootnote, 

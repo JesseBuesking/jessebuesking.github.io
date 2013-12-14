@@ -36,4 +36,6 @@ $(document).ready(function() {
 
   // icon hover
   $('a > i.fa').parent().hover(function() { $('i.fa', this).toggleClass('hover'); });
+  // header links
+  $('h1[id],h2[id],h3[id],h4[id],h5[id]').wrapInner('<span class="header"></span>').prepend('<span class="hash">#</span>').wrap('a').parents('a').each(function(d){var id=$('h1,h2,h3,h4,h5', this).attr('id');$(this).attr('href','#'+id).addClass('id-hash').contents().filter(function(){return this.nodeType===3;}).remove();$(this).hover(function(){$('span', this).toggleClass('hover');});});
 });
