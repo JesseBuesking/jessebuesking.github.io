@@ -52,49 +52,30 @@ Use the following script to alter an already-created git repository, adding hook
 
 {% highlight bash %}
 #!/bin/bash
+# sets up a permissions git hook
 
 DIR=$1
-if [ -z "$1" ]; then
+if [ -z "$DIR" ]; then
     echo "Need to supply a directory."
     exit 1
 fi
 
-echo "sudo /bin/chgrp -R git *" >> $DIR/hooks/applypatch-msg
-echo "sudo /bin/chmod -R 670 *" >> $DIR/hooks/applypatch-msg
-echo "sudo /bin/chown -R git:git *" >> $DIR/hooks/applypatch-msg
-sudo /bin/chmod a+x $DIR/hooks/applypatch-msg
-echo "sudo /bin/chgrp -R git *" >> $DIR/hooks/commit-msg
-echo "sudo /bin/chmod -R 670 *" >> $DIR/hooks/commit-msg
-echo "sudo /bin/chown -R git:git *" >> $DIR/hooks/commit-msg
-sudo /bin/chmod a+x $DIR/hooks/commit-msg
-echo "sudo /bin/chgrp -R git *" >> $DIR/hooks/post-commit
-echo "sudo /bin/chmod -R 670 *" >> $DIR/hooks/post-commit
-echo "sudo /bin/chown -R git:git *" >> $DIR/hooks/post-commit
-sudo /bin/chmod a+x $DIR/hooks/post-commit
-echo "sudo /bin/chgrp -R git *" >> $DIR/hooks/post-receive
-echo "sudo /bin/chmod -R 670 *" >> $DIR/hooks/post-receive
-echo "sudo /bin/chown -R git:git *" >> $DIR/hooks/post-receive
-sudo /bin/chmod a+x $DIR/hooks/post-receive
-echo "sudo /bin/chgrp -R git *" >> $DIR/hooks/post-update
-echo "sudo /bin/chmod -R 670 *" >> $DIR/hooks/post-update
-echo "sudo /bin/chown -R git:git *" >> $DIR/hooks/post-update
-sudo /bin/chmod a+x $DIR/hooks/post-update
-echo "sudo /bin/chgrp -R git *" >> $DIR/hooks/pre-applypatch
-echo "sudo /bin/chmod -R 670 *" >> $DIR/hooks/pre-applypatch
-echo "sudo /bin/chown -R git:git *" >> $DIR/hooks/pre-applypatch
-sudo /bin/chmod a+x $DIR/hooks/pre-applypatch
-echo "sudo /bin/chgrp -R git *" >> $DIR/hooks/pre-commit
-echo "sudo /bin/chmod -R 670 *" >> $DIR/hooks/pre-commit
-echo "sudo /bin/chown -R git:git *" >> $DIR/hooks/pre-commit
-sudo /bin/chmod a+x $DIR/hooks/pre-commit
-echo "sudo /bin/chgrp -R git *" >> $DIR/hooks/pre-rebase
-echo "sudo /bin/chmod -R 670 *" >> $DIR/hooks/pre-rebase
-echo "sudo /bin/chown -R git:git *" >> $DIR/hooks/pre-rebase
-sudo /bin/chmod a+x $DIR/hooks/pre-rebase
-echo "sudo /bin/chgrp -R git *" >> $DIR/hooks/update
-echo "sudo /bin/chmod -R 670 *" >> $DIR/hooks/update
-echo "sudo /bin/chown -R git:git *" >> $DIR/hooks/update
-sudo /bin/chmod a+x $DIR/hooks/update
+change_permissions() {
+    echo "sudo /bin/chgrp -R git *" >> $1
+    echo "sudo /bin/chmod -R 670 *" >> $1
+    echo "sudo /bin/chown -R git:git *" >> $1
+    sudo /bin/chmod a+x $1
+}
+
+change_permissions $DIR/hooks/applypatch-msg
+change_permissions $DIR/hooks/commit-msg
+change_permissions $DIR/hooks/post-commit
+change_permissions $DIR/hooks/post-receive
+change_permissions $DIR/hooks/post-update
+change_permissions $DIR/hooks/pre-applypatch
+change_permissions $DIR/hooks/pre-commit
+change_permissions $DIR/hooks/pre-rebase
+change_permissions $DIR/hooks/update
 {% endhighlight %}
     
 Once you've created the script and given it execute permissions via
