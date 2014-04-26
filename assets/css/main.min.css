@@ -2770,6 +2770,9 @@ body {
 .article-wrap li > a.reversefootnote {
   border-bottom-width: 0;
 }
+.article-wrap p {
+  text-align: justify;
+}
 .toc {
   display: none;
   font-size: 95%;
