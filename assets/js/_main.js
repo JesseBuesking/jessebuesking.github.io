@@ -34,6 +34,11 @@ $(document).ready(function() {
     mainClass: 'mfp-fade'
   });
 
+  $('body').on('click', 'a', function() {
+      var href = $(this).attr('href');
+      ga('send', 'event', 'anchor', 'click', href);
+  });
+
   // icon hover
   $('a > i.fa').parent().hover(function() { $('i.fa', this).toggleClass('hover'); });
   // header links
