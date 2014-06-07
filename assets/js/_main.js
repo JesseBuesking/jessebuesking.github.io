@@ -36,7 +36,11 @@ $(document).ready(function() {
 
   $('body').on('click', 'a', function() {
       var href = $(this).attr('href');
-      ga('send', 'event', 'anchor', 'click', href);
+      ga('send', 'event', 'anchor', 'click', href, {
+          'hitCallback': function () {
+              document.location = href;
+          }
+      });
   });
 
   // icon hover
