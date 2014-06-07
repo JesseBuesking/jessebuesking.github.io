@@ -36,11 +36,15 @@ $(document).ready(function() {
 
   $('body').on('click', 'a', function() {
       var href = $(this).attr('href');
-      ga('send', 'event', 'anchor', 'click', href, {
-          'hitCallback': function () {
-              document.location = href;
-          }
-      });
+      if ($(this).attr('target') === '_blank') {
+        ga('send', 'event', 'anchor', 'click');
+      } else {
+        ga('send', 'event', 'anchor', 'click', href, {
+            'hitCallback': function () {
+                document.location = href;
+            }
+        });
+      }
   });
 
   // icon hover
