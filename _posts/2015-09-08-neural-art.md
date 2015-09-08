@@ -19,23 +19,32 @@ baseurl: /JesseBuesking
 ---
 
 <style>
-    .pair {
-        margin-bottom: 10px;
+    article .pair {
+        padding: 4px 0;
+        margin: 4px 0;
         border-bottom: 3px solid #ddd;
+    }
+    article .pair p {
+        padding: 10px 0;
+    }
+    article img {
+        padding: 4px;
+        display: block;
+        margin: 0 auto;
     }
 </style>
 
 
-Fairly recently, a paper titled [A Neural Algorithm of Artistic Style](http://arxiv.org/abs/1508.06576) appeared and several implementations of the algorithm appeared. Like many, I found it to be quite impressive and decided to try it out for myself. Below are some the results of applying that technique to some images from the popular television show *Doctor Who*, as well as to myself.
+Fairly recently, a paper titled [A Neural Algorithm of Artistic Style](http://arxiv.org/abs/1508.06576) was released and several implementations of the algorithm appeared. Like many, I found it to be quite impressive and decided to try it out for myself. Below are some the results of applying that technique to some images from the popular television show _Doctor Who_, as well as to myself.
 
-*Note: You can click the resulting image for each of the outputs below to view a gif of the neural network applying the technique to the original image. I decided not to inline the gif image to save those viewing this page on mobile from having to download a bunch of ~4mb gifs to save some bandwidth.*
+_Note: You can click the resulting image for each of the outputs below to view a gif of the neural network applying the technique to the original image. It might take a bit to download the gif, so be patient. I decided not to inline the gif image to save those viewing this page on mobile from having to download a bunch of ~4mb gifs in order to save some bandwidth._
 
 
 ### Doctor Who
 
 Being a fan of Doctor Who, I figured that I would try this out on some photos from the show.
 
-To start, *Starry Night* seems to be a good fit for this image of the TARDIS floating out in space.
+To start, _Starry Night_ seems to be a good fit for this image of the TARDIS floating out in space.
 
 <img
     src="{{ site.baseurl }}/static/img/neural-art/starry_night.jpg"
@@ -57,14 +66,18 @@ To start, *Starry Night* seems to be a good fit for this image of the TARDIS flo
         height="250"
         alt="TARDIS styled using Starry Night">
     </img>
+
+    <p>
+    You can see the dark tower from the original photo coming through in various places throughout the image. The TARDIS is still visible and is the brightest part of the image.
+    </p>
 </div>
-
-You can see the dark tower from the original photo coming through in various places throughout the image. The TARDIS is still visible and is the brightest part of the image.
-
-In the fifth series, there is an episode where the Doctor sees a painting of his TARDIS exploding, painted by — according to the episode — Vincent van Gogh himself. This would also seem to be a good fit for applying *Starry Night*.
 
 <!-- tardis exploding -->
 <div class="pair">
+    <p>
+    In the fifth series, there is an episode where the Doctor sees a painting of his TARDIS exploding, painted by — according to the episode — Vincent van Gogh himself. This would also seem to be a good fit for applying Starry Night.
+    </p>
+
     <img
         src="{{ site.baseurl }}/static/img/neural-art/tardis-explode.png"
         width="400"
@@ -77,9 +90,11 @@ In the fifth series, there is an episode where the Doctor sees a painting of his
         height="225"
         alt="TARDIS exploding styled using Starry Night">
     </img>
-</div>
 
-Again you can see the dark tower in a few spots. I think this one turned out really well with a lot of the original artwork taking shape in this resulting image.
+    <p>
+    Again you can see the dark tower in a few spots. I think this one turned out really well with a lot of the original artwork taking shape in this resulting image.
+    </p>
+</div>
 
 Earlier in that season, the Doctor and Amelia Pond travel back in time and meet up with van Gogh. The actor they found to play van Gogh bears a resemblance to the famous painter himself, so I decided to try using the style from one of his self portraits on the actor.
 
@@ -121,14 +136,16 @@ I was curious to see the effect of applying it to the same image, but this time 
         height="225"
         alt="van Gogh actor cropped styled using a van Gogh self portrait">
     </img>
+    <p>
+    It looks like both turned out well, however I think the network did a better job on the cropped image. Cropping enlarged the details of the image so that the large brush strokes are still able to preserve a lot of detail. For example, compare the eyes in the two images. You can see the eyes in the first image, but they blend in to some extent with the rest of the face. The white of his eyes and the definition of his nose are more defined in the second image, which is more inline with the original self portrait.
+    </p>
 </div>
-
-It looks like both turned out well, however I think the network did a better job on the cropped image. Cropping enlarged the details of the image so that the large brush strokes are still able to preserve a lot of detail. For example, compare the eyes in the two images. You can see the eyes in the first image, but they blend in to some extent with the rest of the face. The white of his eyes and the definition of his nose are more defined in the second image, which is more inline with the original self portrait.
-
-I decided to also use a still from the episode where van Gogh, the Doctor, and Amelia are all together. Again, I applied the self portrait to the image.
 
 <!-- van gogh, the doctor, and amelia -->
 <div class="pair">
+    <p>
+    I decided to also use a still from the episode where van Gogh, the Doctor, and Amelia are all together. Again, I applied the self portrait to the image.
+    </p>
     <img
         src="{{ site.baseurl }}/static/img/neural-art/van-gogh-dr-pond.png"
         width="400"
@@ -141,9 +158,10 @@ I decided to also use a still from the episode where van Gogh, the Doctor, and A
         height="225"
         alt="van Gogh, the Doctor, and Amelia styled using a van Gogh self portrait">
     </img>
+    <p>
+    Aside from the BBC copyright notice making it's way into the result a bit, I'd like to think that van Gogh painted this himself and this is proof that the Doctor really did travel back in time. It looks pretty good!
+    </p>
 </div>
-
-Aside from the BBC copyright notice making it's way into the result a bit, I'd like to think that van Gogh painted this himself and this is proof that the Doctor really did travel back in time. It looks pretty good!
 
 
 ### Myself
@@ -316,17 +334,27 @@ I also attempted to run the network on an image of myself, styled to some famous
     </img>
 </div>
 
-All the results look pretty good! The only one keeping me up at night is the *Mona Lisa*-styled result because the result is kinda creepy, but otherwise the styles applied were done reasonably well.
+All the results look pretty good! The only one keeping me up at night is the _Mona Lisa_-styled image because the result is kinda creepy, but otherwise the styles applied were done reasonably well.
 
 Overall I'd say that this technique is pretty cool and I think the results turned out pretty darned good.
 
 <script>
-    $("img").click(function () {
-        // backup the current src
-        var alt = $(this).data("alt"),
-            current = $(this).attr("src");
-        // swap
-        $(this).data("alt", current);
-        $(this).attr("src", alt);
+    function defer(method) {
+        if (window.jQuery) {
+            method();
+        } else {
+            setTimeout(function() { defer(method) }, 50);
+        }
+    }
+
+    defer(function () {
+        $("img").click(function () {
+            // backup the current src
+            var alt = $(this).data("alt"),
+                current = $(this).attr("src");
+            // swap
+            $(this).data("alt", current);
+            $(this).attr("src", alt);
+        });
     });
 </script>
